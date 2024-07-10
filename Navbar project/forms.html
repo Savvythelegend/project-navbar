@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group .radio-group {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .form-group .radio-group label {
+            margin-right: 10px;
+            margin-bottom: 0;
+        }
+
+        .form-group .radio-group input {
+            margin-right: 5px;
+        }
+
+        @media (max-width: 600px) {
+            form {
+                padding: 10px;
+            }
+
+            .form-group {
+                margin-bottom: 10px;
+            }
+
+            .form-group input,
+            .form-group select {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            body {
+                padding: 10px;
+            }
+
+            form {
+                padding: 5px;
+            }
+
+            .form-group {
+                margin-bottom: 8px;
+            }
+
+            .form-group input,
+            .form-group select {
+                padding: 6px;
+                font-size: 12px;
+            }
+        }
+         .submit-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:active {
+            background-color: #00408a;
+        }
+          .reset-btn {
+            background-color: #6c757d;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: white;
+            padding:10px 20px ;
+            border-radius:20px solid white;
+        }
+        .reset-btn:hover {
+            background-color: #5a6268;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h1>Enter Your Details Here</h1>
+    <form action="">
+        <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" name="first-name" id="first-name" placeholder="Enter your first name">
+        </div>
+        <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" name="last-name" id="last-name" placeholder="Enter your last name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter the email address">
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" placeholder="Enter your age">
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" name="dob" id="dob">
+        </div>
+        <div class="form-group">
+            <label>Gender</label>
+            <div class="radio-group">
+                <label for="male">
+                    <input type="radio" name="gender" id="male" value="male"> Male
+                </label>
+                <label for="female">
+                    <input type="radio" name="gender" id="female" value="female"> Female
+                </label>
+                <label for="other">
+                    <input type="radio" name="gender" id="other" value="other"> Other
+                </label>
+            </div>
+        </div>
+        <div class="form-group"><br>
+            <select>
+            <label for="fav-color">Favorite Color</label>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="yellow">Yellow</option>
+                <option value="other">Other</option>
+            </select>
+        </div><br>
+        <div class="form-group">
+            <button type="reset" class="reset-btn">Reset</button><br>
+            <button type="submit"class="btn submit-btn">Submit</button>
+    </div>
+    </form>
+</body>
+
+</html> 
